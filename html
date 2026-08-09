@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sanjeev Kumar Rai - Resume</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e9edf2;
+            color: #202020;
+            line-height: 1.45;
+        }
+
+        .resume {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 25px auto;
+            background: #ffffff;
+            padding: 14mm 15mm;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+        }
+
+        /* ================= HEADER ================= */
+
+        .header {
+            border-bottom: 2px solid #142b4d;
+            padding-bottom: 12px;
+        }
+
+        .name {
+            font-size: 31px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #142b4d;
+        }
+
+        .role {
+            margin-top: 3px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+            margin-top: 10px;
+            font-size: 11px;
+        }
+
+        .contact span {
+            white-space: nowrap;
+        }
+
+        .contact a {
+            color: #202020;
+            text-decoration: none;
+        }
+
+        /* ================= SECTION ================= */
+
+        .section {
+            margin-top: 14px;
+        }
+
+        .section-title {
+            color: #142b4d;
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            border-bottom: 1px solid #b8c0ca;
+            padding-bottom: 4px;
+            margin-bottom: 8px;
+        }
+
+        /* ================= SUMMARY ================= */
+
+        .summary {
+            font-size: 10.5px;
+            text-align: justify;
+        }
+
+        /* ================= SKILLS ================= */
+
+        .skills {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px 28px;
+        }
+
+        .skill-row {
+            font-size: 10.2px;
+        }
+
+        .skill-row strong {
+            color: #142b4d;
+        }
+
+        /* ================= PROJECTS ================= */
+
+        .project {
+            margin-bottom: 10px;
+        }
+
+        .project:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .project-title {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: #142b4d;
+        }
+
+        .project-tech {
+            font-size: 9px;
+            color: #555;
+            font-style: italic;
+            text-align: right;
+        }
+
+        .project ul {
+            margin: 4px 0 0 18px;
+        }
+
+        .project li {
+            font-size: 10px;
+            margin-bottom: 2px;
+            padding-left: 2px;
+        }
+
+        /* ================= EDUCATION ================= */
+
+        .education-item {
+            margin-bottom: 8px;
+        }
+
+        .education-main {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .degree {
+            font-size: 10.8px;
+            font-weight: 700;
+            color: #142b4d;
+        }
+
+        .year {
+            font-size: 10px;
+            white-space: nowrap;
+        }
+
+        .institution {
+            font-size: 10px;
+            color: #333;
+        }
+
+        /* ================= CERTIFICATION ================= */
+
+        .certification {
+            display: flex;
+            justify-content: space-between;
+            font-size: 10.5px;
+        }
+
+        /* ================= TWO COLUMN LOWER AREA ================= */
+
+        .bottom-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr;
+            gap: 28px;
+        }
+
+        .small-list {
+            margin-left: 17px;
+        }
+
+        .small-list li {
+            font-size: 10px;
+            margin-bottom: 3px;
+        }
+
+        /* ================= PRINT ================= */
+
+        @media print {
+
+            @page {
+                size: A4;
+                margin: 0;
+            }
+
+            body {
+                background: white;
+            }
+
+            .resume {
+                width: 210mm;
+                min-height: 297mm;
+                margin: 0;
+                padding: 13mm 14mm;
+                box-shadow: none;
+            }
+
+            a {
+                color: #202020 !important;
+                text-decoration: none !important;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+
+            .resume {
+                width: 95%;
+                margin: 10px auto;
+                padding: 25px;
+            }
+
+            .skills,
+            .bottom-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-header,
+            .education-main {
+                display: block;
+            }
+
+            .project-tech,
+            .year {
+                text-align: left;
+                display: block;
+                margin-top: 2px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="resume">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="name">
+            SANJEEV KUMAR RAI
+        </div>
+
+        <div class="role">
+            Software / AI Engineering Intern
+        </div>
+
+        <div class="contact">
+
+            <span>📞 +91 6207116890</span>
+
+            <span>
+                ✉
+                <a href="mailto:sr1415014@gmail.com">
+                    sr1415014@gmail.com
+                </a>
+            </span>
+
+            <span>📍 Jamshedpur, Jharkhand, India</span>
+
+            <span>
+                LinkedIn:
+                <a href="https://www.linkedin.com/in/sanjeevrai07"
+                   target="_blank">
+                    linkedin.com/in/sanjeevrai07
+                </a>
+            </span>
+
+            <span>
+                GitHub:
+                <a href="https://github.com/SanjeevRai07"
+                   target="_blank">
+                    github.com/SanjeevRai07
+                </a>
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= SUMMARY ================= -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Professional Summary
+        </h2>
+
+        <p class="summary">
+            B.Tech Computer Science Engineering student with hands-on experience
+            building AI-powered and full-stack applications using Python, Java,
+            React, Next.js, TypeScript, Node.js, Supabase, and MySQL. Interested
+            in AI engineering, intelligent automation, software development, and
+            building practical user-focused products. Strong foundation in
+            Machine Learning, DBMS, Operating Systems, and Computer Networks.
+        </p>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Technical Skills
+        </h2>
+
+        <div class="skills">
+
+            <div class="skill-row">
+                <strong>Programming:</strong>
+                Java, Python, C
+            </div>
+
+            <div class="skill-row">
+                <strong>AI / ML:</strong>
+                Machine Learning, Image Classification,
+                AI/ML Model Integration
+            </div>
+
+            <div class="skill-row">
+                <strong>AI & Automation:</strong>
+                AI Agents, Workflow Automation
+            </div>
+
+            <div class="skill-row">
+                <strong>Web Development:</strong>
+                HTML, CSS, JavaScript, React, Next.js,
+                TypeScript, Node.js
+            </div>
+
+            <div class="skill-row">
+                <strong>Databases:</strong>
+                MySQL, Supabase
+            </div>
+
+            <div class="skill-row">
+                <strong>Core CS:</strong>
+                DBMS, Operating Systems, Computer Networks
+            </div>
+
+            <div class="skill-row">
+                <strong>Tools:</strong>
+                Git, GitHub, VS Code, PyCharm, NetBeans
+            </div>
+
+            <div class="skill-row">
+                <strong>Other:</strong>
+                REST APIs, Version Control, API Integration
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Projects
+        </h2>
+
+
+        <!-- PROJECT 1 -->
+
+        <div class="project">
+
+            <div class="project-header">
+
+                <div class="project-title">
+                    FasalTrack – AI-Powered Crop Disease Detection
+                </div>
+
+                <div class="project-tech">
+                    AI/ML | Web Development | Supabase
+                </div>
+
+            </div>
+
+            <ul>
+
+                <li>
+                    Built a web application that allows users to upload
+                    crop leaf images for disease detection.
+                </li>
+
+                <li>
+                    Integrated an AI/ML model to analyze images and provide
+                    disease predictions and recommended remedies.
+                </li>
+
+                <li>
+                    Developed the application using modern web technologies
+                    and deployed it using Netlify.
+                </li>
+
+                <li>
+                    Used Supabase for application data storage and management.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- PROJECT 2 -->
+
+        <div class="project">
+
+            <div class="project-header">
+
+                <div class="project-title">
+                    AI Day Planner – Intelligent Task Planning Assistant
+                </div>
+
+                <div class="project-tech">
+                    AI | Automation | Telegram
+                </div>
+
+            </div>
+
+            <ul>
+
+                <li>
+                    Built an AI-powered task planning workflow that converts
+                    user inputs into structured daily plans.
+                </li>
+
+                <li>
+                    Implemented workflow automation and conversational
+                    interaction for task creation and planning.
+                </li>
+
+                <li>
+                    Integrated Telegram-based interaction for user
+                    communication and task management.
+                </li>
+
+                <li>
+                    Designed the workflow to handle user priorities,
+                    tasks, and schedule-oriented requests.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- PROJECT 3 -->
+
+        <div class="project">
+
+            <div class="project-header">
+
+                <div class="project-title">
+                    Restaurant Management System
+                </div>
+
+                <div class="project-tech">
+                    Java | MySQL | NetBeans
+                </div>
+
+            </div>
+
+            <ul>
+
+                <li>
+                    Developed a Java desktop application for managing
+                    restaurant menus, orders, and billing operations.
+                </li>
+
+                <li>
+                    Implemented CRUD functionality for adding, updating,
+                    and deleting menu items.
+                </li>
+
+                <li>
+                    Connected the application with MySQL for persistent
+                    data management using Java.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Education
+        </h2>
+
+
+        <div class="education-item">
+
+            <div class="education-main">
+
+                <div class="degree">
+                    Bachelor of Technology (B.Tech) – Computer Science Engineering
+                </div>
+
+                <div class="year">
+                    2023 – 2027
+                </div>
+
+            </div>
+
+            <div class="institution">
+                ARKA JAIN University, Jharkhand
+            </div>
+
+        </div>
+
+
+        <div class="education-item">
+
+            <div class="education-main">
+
+                <div class="degree">
+                    Class 12th
+                </div>
+
+                <div class="year">
+                    2023
+                </div>
+
+            </div>
+
+            <div class="institution">
+                L.B.T College, Buxar, Bihar
+            </div>
+
+        </div>
+
+
+        <div class="education-item">
+
+            <div class="education-main">
+
+                <div class="degree">
+                    Class 10th
+                </div>
+
+                <div class="year">
+                    2021
+                </div>
+
+            </div>
+
+            <div class="institution">
+                Cambridge Senior Secondary School, Buxar, Bihar
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BOTTOM ================= -->
+
+    <div class="bottom-grid">
+
+        <!-- CERTIFICATION -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Certification
+            </h2>
+
+            <div class="certification">
+
+                <span>
+                    <strong>NPTEL – Machine Learning</strong>
+                </span>
+
+                <span>
+                    69% | 2025
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- LANGUAGES -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Languages
+            </h2>
+
+            <ul class="small-list">
+
+                <li>English</li>
+                <li>Hindi</li>
+
+            </ul>
+
+        </section>
+
+    </div>
+
+
+    <!-- ================= ADDITIONAL ================= -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Strengths
+        </h2>
+
+        <p class="summary">
+            Problem Solving · Communication · Teamwork · Quick Learning ·
+            Adaptability
+        </p>
+
+    </section>
+
+</div>
+
+</body>
+</html>
